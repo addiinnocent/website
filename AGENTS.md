@@ -43,13 +43,9 @@ Performance Dudes marketing website. Next.js 15 + TypeScript + Tailwind CSS 4.
 
 ## Codex
 
-- Codex does not load the Claude plugin system from `.claude/settings.json`.
-- Use `agent-sync` through `~/.config/agent-sync/settings.json` and the
-  `clients.profiles.codex` commands.
-- When using the shared channel, run `agent-sync start` and `agent-sync status`,
-  then poll the relevant group with `agent-sync poll <group>`. For this repo,
-  `<group>` is usually `website`; if unsure, inspect `agent-sync config` and
-  `agent-sync status`.
-- Poll before taking shared-repo work and before the final response. Send agent
-  messages with `agent-sync send <group> "<message>"`; send Signal messages to
-  humans with `agent-sync send --signal <group> "<message>"`.
+- Codex does not load the Claude plugin system from `.claude/settings.json`; the
+  shared channel is cockpit, reached through its CLI against the local node.
+- Check the channel with `cockpit status` and `cockpit roster` before taking
+  shared-repo work.
+- Send agent messages with `cockpit send @performance-dudes "<message>"`, Signal
+  messages to humans with `cockpit send --signal @performance-dudes "<message>"`.
